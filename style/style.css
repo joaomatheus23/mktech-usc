@@ -1,0 +1,149 @@
+@font-face {
+    font-family: SFPRODISPLAYBOLD;
+    src: url('../SFPRODISPLAYBOLD.OTF') format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --fonte-padrao: 'SFPRODISPLAYBOLD', Arial; 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--fonte-padrao);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #003b5f, #000000, #0b4350);
+    background-size: 300% 300%;
+    animation: cores 20s ease-in-out infinite;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+form {
+    max-width: 450px;
+    margin: auto;
+    padding: 30px 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: var(--fonte-padrao);
+    background-color: rgba(255, 255, 255, 0.123);
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    
+}
+
+form img {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    width: 175px;
+}
+
+
+input, select {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    
+}
+
+
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input#nascimento {
+    text-align: justify;
+}
+
+input[type="text"] {
+    padding: 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    padding: 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+input[type="submit"] {
+    background-color: #41D2F2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: var(--fonte-padrao);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.336);
+}
+
+input[type="submit"]:hover {
+    transition: 0.4s;
+    scale: 105%;
+    background-color: #0367A6;
+}
+
+input[type="submit"]:checked {
+    background-color: #0367A6;
+}
+
+select {
+    margin-left: 0px;
+    margin-bottom: 5px;
+    width: 20%;
+    font-size: 16px;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 0 0;
+}
+
+#lang {
+    background-image: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'><polygon points='0,0 10,5 0,10'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+option {
+    color: black;
+    border: none;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes cores {
+    0% {background-position: 0 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0 50%;}
+}

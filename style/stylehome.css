@@ -1,0 +1,109 @@
+@font-face {
+    font-family: SFPRODISPLAYBOLD;
+    src: url('../SFPRODISPLAYBOLD.OTF') format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --fonte-padrao: 'SFPRODISPLAYBOLD', Arial; 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    background: url(../imgs/background2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px; 
+}
+
+.logo {
+    width: 20%; 
+    margin-bottom: 20px; 
+}
+
+img {
+    height: auto;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+img:hover {
+    scale: 108%;
+    transition: 0.8s
+}
+
+img:active, img:focus {
+    animation: girar 1s ease;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    width: calc(25% + 5px); 
+    margin: 10px;
+    font-family: var(--fonte-padrao);
+    height: 55px;
+    background: #ffffff2a;
+    backdrop-filter: blur(5px);
+    color: #41d2f2;
+    border: 2px solid #ffffff23;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.1);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    animation: fadeIn 1s ease;
+}
+
+.button:hover {
+    transition: 0.5s;
+    background-color: #41d2f2;
+    color: white;
+    scale: 105%;
+}
+
+@media (max-width: 768px) {
+   .button {
+        width: calc(40% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+   .button {
+        width: calc(60% - 10px);
+    }
+}
+
+@keyframes girar {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+

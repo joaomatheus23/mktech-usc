@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../js/api.js"></script>
+    <script src="../js/Mascaras.js"></script>
+    <script src="../js/TipoPessoa.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="cadastro">
+            <img src="../imgs/logo.png" alt="logo">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="ra">R.A:</label>
+            <input type="text" id="ra" name="ra" required autocomplete="off">
+
+            <label for="nascimento">Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required>
+
+            <select name="lang" id="lang">
+                <option value="cpf">CPF</option>
+                <option value="cnpj">CNPJ</option>
+            </select>
+
+            <div class="IdCpf" id="IdCpf" style="display: block;">
+                <label for="cpf">Pessoa Fisica:</label> 
+                <input type="text" id="cpf" name="cpf" maxlength="11" autocomplete="off" placeholder="000.000.000-00">
+            </div>
+
+            <div class="IdCnpj" id="IdCnpj" style="display: none;">
+                <label for="cnpj">Pessoa Juridica:</label> 
+                <input type="text" id="cnpj" name="cnpj" maxlength="14" autocomplete="off" placeholder="00.000.000/0000-00">
+            </div>
+
+            <label for="cep">CEP:</label> </label>
+            <input type="text" id="cep" name="cep" maxlength="8" placeholder="00000-000" required>
+
+            <label for="rua">Rua: </label>
+            <input type="text" id="rua" name="rua" readonly required>
+
+            <label for="bairro">Bairro: </label>
+            <input type="text" id="bairro" name="bairro" readonly required>
+
+            <label for="cidade">Cidade: </label>
+            <input type="text" id="cidade" name="cidade" readonly required>
+
+            <label for="uf">Estado: </label>
+            <input type="text" id="uf" name="uf" readonly required>
+
+            <label for="numero">Número: </label>
+            <input type="text" id="numero" name="numero" required>
+
+            <input type="submit" value="Cadastrar Aluno" onclick="">
+        </form>
+    </div>
+</body>
+</html>
