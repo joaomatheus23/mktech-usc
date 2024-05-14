@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 
 // Configuração da conexão
 const connection = mysql.createConnection({
-    host: 'msql.trabalhomantovani.kinghost.net',
+    host: '191.6.223.216',
     database: 'trabalhomantov',
     user: 'trabalhomantov',
     password: 'Mantovas51'
